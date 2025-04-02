@@ -1,0 +1,14 @@
+﻿within M2.Examples;
+model test
+  Modelica.Blocks.Tables.CombiTable1Dv combiTable1Dv
+    annotation (Placement(transformation(origin = {-56.00000000000001, 32.0}, 
+      extent = {{-10.0, -10.0}, {10.0, 10.0}})));
+  Modelica.Blocks.Sources.Sine sine
+    annotation (Placement(transformation(origin = {-130.0, 30.0}, 
+      extent = {{-10.0, -10.0}, {10.0, 10.0}})));
+equation 
+  connect(combiTable1Dv.u[1], sine.y)
+    annotation (Line(origin = {-93.0, 31.0}, 
+      points = {{25.0, 1.0}, {-26.0, 1.0}, {-26.0, -1.0}}, 
+      color = {0, 0, 127}));
+end test;
