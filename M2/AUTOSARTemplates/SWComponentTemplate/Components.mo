@@ -46,9 +46,24 @@ are part of a composition. A PortGroup within an atomic SWC cannot be linked to\
   end PortPrototype;
   class RPortPrototype "Component port requiring a certain port interface"
     annotation (Protection(access = Access.nonPackageDuplicate));
+    extends M2.AUTOSARTemplates.SWComponentTemplate.Components.AbstractProvidedPortPrototype;
   end RPortPrototype;
-  class PPortPrototype "Component port providing a certain port interface."
+  class  PPortPrototype "Component port providing a certain port interface."
+
     annotation (Protection(access = Access.nonPackageDuplicate));
   end PPortPrototype;
   annotation (Protection(access = Access.nonPackageDuplicate));
+  model AbstractProvidedPortPrototype
+  extends M2.AUTOSARTemplates.SWComponentTemplate.Components.PortPrototype;
+
+  end AbstractProvidedPortPrototype;
+  model AbstractRequiredPortPrototype
+  extends M2.AUTOSARTemplates.SWComponentTemplate.Components.PortPrototype;
+
+  end AbstractRequiredPortPrototype;
+  model PRPortPrototype
+  extends M2.AUTOSARTemplates.SWComponentTemplate.Components.AbstractProvidedPortPrototype;
+  extends M2.AUTOSARTemplates.SWComponentTemplate.Components.AbstractRequiredPortPrototype;
+
+  end PRPortPrototype;
 end Components;

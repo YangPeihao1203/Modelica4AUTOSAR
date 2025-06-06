@@ -11,7 +11,7 @@ extent={{-10.8354,-10.8354},{10.8354,10.8354}})));
     q_end={Modelica.Constants.pi}, 
     qd_max={2}, 
     qdd_max={3}) 
-    annotation (Placement(transformation(origin={-185.671,2.91139}, 
+    annotation (Placement(transformation(origin={-183.661,-0.821943}, 
 extent={{-17.443,-17.443},{17.443,17.443}})));
 
       Modelica.Mechanics.Rotational.Sensors.SpeedSensor speed       annotation (
@@ -35,8 +35,8 @@ extent={{-24.1772,-25.9494},{24.1772,25.9494}})));
 equation
   connect(swc_control1.u, kinematicPTP.q[1]) 
   annotation(Line(origin={-148,16}, 
-  points={{18.1504,-1.05783},{18.1504,0.86579},{-18.4837,0.86579}}, 
-  color={0,0,127}));
+points={{53.0747,-2.99537},{-16.4734,-2.99537},{-16.4734,-2.86754}}, 
+color={0,0,127}));
   connect(swc_control1.pport, torque.tau) 
   annotation(Line(origin={-26,-3}, 
 points={{-12.0743,-2.75162},{9.36835,-2.75162},{9.36835,-3.3038}}, 

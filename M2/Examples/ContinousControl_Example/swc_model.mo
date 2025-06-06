@@ -89,8 +89,8 @@
       annotation (Placement(transformation(origin={60.2532,-7.97462}, 
   extent={{-28.4304,-15.4937},{28.4304,15.4937}})));
     VisibleElements.RPORT rPORT(sample_time=0.1) 
-      annotation (Placement(transformation(origin={-175.797,32.6077}, 
-  extent={{-10,-10.3544},{10,10.3544}})));
+      annotation (Placement(transformation(origin={-171.202,31.1718}, 
+extent={{-10,-10.3544},{10,10.3544}})));
     VisibleElements.RPORT rPORT1(sample_time=0.1) 
       annotation (Placement(transformation(origin={-210.532,14.5317}, 
   extent={{-10,-10},{10,10}})));
@@ -101,22 +101,22 @@
       annotation (Placement(transformation(origin={115.19,-8.50632}, 
   extent={{-13.8987,-13.8987},{13.8987,13.8987}})));
     Modelica.Blocks.Interfaces.RealInput u 
-      annotation (Placement(transformation(origin={-264.404,71.2405}, 
-  extent={{-20,-20},{20,20}})));
+      annotation (Placement(transformation(origin={-119.953,63.7738}, 
+extent={{-20,-20},{20,20}})));
     Modelica.Blocks.Interfaces.RealInput u1 
-      annotation (Placement(transformation(origin={-259.088,-52.8101}, 
-  extent={{-20,-20},{20,20}})));
+      annotation (Placement(transformation(origin={-121.242,-6.86138}, 
+extent={{-20,-20},{20,20}})));
     Modelica.Blocks.Interfaces.RealInput u2 
-      annotation (Placement(transformation(origin={-99.5949,-44.6582}, 
-  extent={{-20,-20},{20,20}})));
+      annotation (Placement(transformation(origin={-120.559,-77.9711}, 
+extent={{-20,-20},{20,20}})));
     VisibleElements.IRV iRV(filter=false) 
       annotation (Placement(transformation(origin={-4.11353,21.6895}, 
   extent={{-10,-10},{10,10}})));
     equation
     connect(slowControlRunnable.u, rPORT.y_) 
     annotation(Line(origin={-245,48}, 
-  points={{129.257,-17.907},{81.7402,-17.907},{81.7402,-18.1883}}, 
-  color={0,0,127}));
+points={{129.257,-17.907},{83.8479,-17.907},{83.8479,-17.2424}}, 
+color={0,0,127}));
     connect(slowControlRunnable.u1, rPORT1.y_) 
     annotation(Line(origin={-245,23}, 
   points={{129.008,-8.70721},{44.5183,-8.70721},{44.5183,-8.86833}}, 
@@ -131,16 +131,16 @@
   color={0,0,127}));
     connect(u, rPORT.u) 
     annotation(Line(origin={-312,57}, 
-  points={{47.5958,14.2405},{81.7976,14.2405},{81.7976,-27.1095},{125.922,-27.1095}}, 
-  color={0,0,127}));
+points={{47.596,14.2405},{81.7976,14.2405},{81.7976,-26.1388},{130.548,-26.1388}}, 
+color={0,0,127}));
     connect(rPORT1.u, u1) 
     annotation(Line(origin={-310,22}, 
   points={{89.2183,-7.76833},{80.6837,-7.76833},{80.6837,-74.8101},{50.9116,-74.8101}}, 
   color={0,0,127}));
     connect(rPORT2.u, u2) 
     annotation(Line(origin={-59,-43}, 
-    points={{40.24367,0.8772},{-40.5949,0.8772},{-40.5949,-1.6582}}, 
-    color={0,0,127}));
+points={{40.24367,0.8772},{-39.7334,0.8772},{-39.7334,0.639236}}, 
+color={0,0,127}));
     connect(iRV.y_, fastControlRunnable.u) 
     annotation(Line(origin={15,9}, 
   points={{-8.11353,12.0895},{10.7913,12.0895},{10.7913,-10.1652}}, 

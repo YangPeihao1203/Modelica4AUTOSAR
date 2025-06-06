@@ -402,7 +402,4 @@ package Swc_Expfcns_Example
       horizontalAlignment = LinePattern.None)}));
 
   end FunctionCaller1;
-  model autosar_composition
-
-  end autosar_composition;
-end Swc_Expfcns_Example;
+  end Swc_Expfcns_Example;
