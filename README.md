@@ -40,8 +40,8 @@ Explore these cases to see how our approach enables flexible, extensible, and hi
    ```
 2. Open MWORKS Sysplorer Modelica environment.
 3. Load the M2 package by opening `M2.package.mo`.
-4. Load the `HeadLamp.mo` file.
-5. Load the `AUTOSAR_HeadLamp.mo` file.
+4. Load the `M2.Examples.HeadLamp.mo` file.
+5. Load the `M2.Examples.AUTOSAR_HeadLamp.mo` file.
 6. Run the simulation for `AUTOSAR_HeadLamp.mo` and analyze the results.
 
 ## Citation
