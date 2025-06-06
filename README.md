@@ -10,15 +10,18 @@ This repository provides an open-source Modelica-based framework for visual mode
 
 ## Repository Structure
 ```
-📂 M2/                 # Encapsulated AUTOSAR model library
-📜 HeadLamp.mo         # Modelica representation of the electrical properties of a headlamp
-📜 AUTOSAR_HeadLamp.mo # Multi-domain simulation model integrating AUTOSAR and headlamp behavior
-📜 README.md           # Project documentation
+📂 M2/ # Encapsulated AUTOSAR model library
+├── 📂 VisibleElements/ # Visual modeling elements for drag-and-drop AUTOSAR SWC construction
+├── 📂 Examples/ # Ten modeling examples across automotive, electrical, and mechanical domains
+├── 📂 Utilities/ # Utility components and helper functions for model development
+├── 📂 AUTOSAR Templates/ # Core modeling templates (e.g., GenericStructure, SWComponentTemplate) based on AUTOSAR standards
+└── 📂 MSR/ # Contains class definitions for elements in the Manufacturer Supplier Relationship (MSR)
 ```
 
 ## Installation & Usage
 ### Prerequisites
-- **Modelica Environment**: Install [MWORKS Sysplorer](https://www.openmodelica.org/).
+- **Modelica Environment**: Install [MWORKS Sysplorer](https://www.tongyuan.cc/product/MWorksSysplorer).
+- **Modelica Standard Library**: Version 4.0.0 
 
 ### Steps to Run Simulation
 1. Clone the repository:
