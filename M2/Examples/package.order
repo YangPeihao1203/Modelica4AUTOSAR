@@ -7,3 +7,6 @@ autosar_compositon
 PhysicalSystem
 AUTOSAR_Physical_Interaction
 ContinousControl_Example
+DriveSystemWithPID_Example
+SpeedControllerDCPM_Example
+IMC_withLosses_Example
