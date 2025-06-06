@@ -18,6 +18,15 @@ This repository provides an open-source Modelica-based framework for visual mode
 └── 📂 MSR/ # Contains class definitions for elements in the Manufacturer Supplier Relationship (MSR)
 ```
 
+## Examples
+
+This repository includes **10 comprehensive example models** showcasing the versatility and power of our Modelica-based AUTOSAR framework.  
+- **3 examples** are fully comparable with official Simulink benchmarks, including detailed performance comparisons.  
+- **7 examples** highlight the multi-domain modeling capabilities, covering electrical, mechanical, and automotive systems.
+
+For **in-depth descriptions, usage instructions, simulation results, and performance metrics**, please refer to the dedicated showcase document: [EXAMPLES.md](./EXAMPLES.md).  
+Explore these cases to see how our approach enables flexible, extensible, and high-fidelity system modeling across domains.
+
 ## Installation & Usage
 ### Prerequisites
 - **Modelica Environment**: Install [MWORKS Sysplorer](https://www.tongyuan.cc/product/MWorksSysplorer).
