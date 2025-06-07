@@ -6,7 +6,6 @@ We appreciate the valuable feedback provided by all reviewers. Common and major 
 
 ## Reviewer #1
 
-## Reviewer #1
 
 **Comment 1:**  
 The manuscript does not indicate whether the complete library was used or if there are other examples.
@@ -159,7 +158,7 @@ Thank you for your valuable suggestion. In Figure 1, we only depict the direct r
 Why does the description of ports in Table II differ from the AUTOSAR required ports and also differ from the descriptions found in Simulink (referenced at mathworks.com/help/autosar/ug/example-modeling-patterns-for-autosar-runnables.html)?
 
 **Response 19:**  
-Thank you for your question. Due to page limitations, the table presents a simplified summary of AUTOSAR port concepts rather than the full detailed definitions from the AUTOSAR standard. We intend to include precise references to the relevant AUTOSAR documentation in a future version of the paper. Regarding the Simulink reference, we were unable to locate explicit descriptions related to required ports in the cited MathWorks documentation. Our modeling approach aligns with the functional behaviors of AUTOSAR ports as implemented in Simulink, but minor discrepancies may exist due to abstraction levels.
+Thank you for your question. Due to page limitations, the table presents a simplified summary of AUTOSAR port concepts rather than the full detailed definitions from the AUTOSAR standard. We intend to include precise references to the relevant AUTOSAR documentation in a future version of the paper. Regarding the Simulink reference, we were unable to locate explicit descriptions related to required ports in the cited MathWorks documentation. Our modeling approach aligns with the functional behaviors of AUTOSAR ports as implemented in Simulink.
 
 ---
 
@@ -167,7 +166,7 @@ Thank you for your question. Due to page limitations, the table presents a simpl
 Please explain how transitivity in inheritance resolves issues with multiple inheritance.
 
 **Response 20:**  
-Thank you for your inquiry. For detailed explanations, please refer to the AUTOSAR_Library_Encapsulation_Guide.md document, as space constraints prevented us from elaborating in the paper. Briefly, Modelica supports only single inheritance; thus, when modeling, we select the most specific base class for inheritance. In cases that conceptually require multiple inheritance, we analyze the inheritance chain and choose the most concrete base class to inherit from. This approach ensures that all necessary behaviors and attributes defined in the AUTOSAR metamodel are captured accurately.
+Thank you for your inquiry. For detailed explanations, please refer to the `AUTOSAR_Library_Encapsulation_Guide.md` document, as space constraints prevented us from elaborating in the paper. Briefly, Modelica supports only single inheritance; thus, when modeling, we select the most specific base class for inheritance. In cases that conceptually require multiple inheritance, we analyze the inheritance chain and choose the most concrete base class to inherit from. This approach ensures that all necessary behaviors and attributes defined in the AUTOSAR metamodel are captured accurately.
 
 ---
 
@@ -183,7 +182,7 @@ Thank you for your insightful suggestion. Our model library is a one-to-one enca
 Why does the language design not go beyond Simulink, for example by directly displaying timing aspects in software component connection diagrams? The main text mentions timing but it is not reflected in the model.
 
 **Response 22:**  
-Thank you for raising this important point. We will emphasize the significance of timing and the current limitations of our modeling approach in the Motivation section of the paper. At present, our work primarily focuses on functional and structural modeling, with timing information represented indirectly through parameters such as sampling periods rather than through explicit visualization. In future work, we intend to extend the modeling language and tools to incorporate graphical support for timing and scheduling aspects, thereby better addressing the needs of industrial multi-domain timing analysis.
+Thank you for your question. This issue has been addressed in the response section and will also be emphasized in the Motivation section of the paper.
 
 
 ---
@@ -191,16 +190,100 @@ Thank you for raising this important point. We will emphasize the significance o
 ## Reviewer #2
 
 **Comment 1:**  
-(请填写评审第一个问题)
+The method is only validated using a small example. What is the largest case study used so far? Are there plans for a more comprehensive evaluation?
 
 **Response 1:**  
-(请填写对应回复)
+Thank you for your insightful comment. To intuitively demonstrate the feasibility of our method, we selected a concise yet illustrative example in the paper. In practice, our largest test case to date is an **automotive throttle control system**, involving **179 variables and 451 parameters**. We will supplement the revised manuscript with performance evaluations based on this larger case. Our approach is designed to be scalable, and we plan to collaborate with the open-source community to extend support to larger-scale cases in the future.
+
+---
 
 **Comment 2:**  
-(请填写评审第二个问题)
+In addition to the lack of support for BSW and RTE, the paper lacks a discussion on the limitations of the proposed approach. How extensible is the Modelica integration? What about performance and usability?
 
 **Response 2:**  
-(请填写对应回复)
+Thank you for your suggestion. We will add a detailed discussion of the method’s limitations in the revised manuscript, particularly regarding BSW and RTE support. Our method is built upon open-source Modelica libraries, offering good extensibility by allowing users to define new Modelica classes to support additional AUTOSAR elements. Regarding performance, we will include empirical results, such as simulation time comparisons with Simulink. As for usability, our method has been tested in case studies, and we provide comprehensive documentation and example projects to facilitate adoption.
+
+---
+
+**Comment 3:**  
+There have been prior studies on using Modelica in the AUTOSAR context. These related works should be discussed:  
+- Thiele et al.: "Using the Functional Mockup Interface as an Intermediate Format in AUTOSAR Software Component Development"  
+- Janczyk et al.: "Validation of a Battery Management System based on AUTOSAR via FMI on a HiL platform"  
+- Neudorfer et al.: "FMI for Physics-Based Models on AUTOSAR Platforms"
+
+**Response 3:**  
+Thank you for pointing out these important references. We will discuss these works in the related work section of the revised manuscript. While these studies utilize FMI as an intermediate format, our approach directly models AUTOSAR elements at the Modelica language level, without relying on external toolchains. This allows us to support **cross-domain modeling and simulation** more naturally and flexibly.
+
+---
+
+**Comment 4:**  
+Clarify the statement: "This design enables more flexible data type definitions and handling."
+
+**Response 4:**  
+Thank you for the question. Since AUTOSAR defines strict data type semantics, mapping AUTOSAR data types to Modelica representations is essential. For example, basic types such as `uint8` or `boolean` can be directly mapped to `Integer` or `Boolean` in Modelica, or defined as new types using `type`. This mapping allows us to flexibly express AUTOSAR data types within Modelica. We will provide more mapping strategies in the revised version.
+
+---
+
+**Comment 5:**  
+More explanation is needed for Figure 1. Some arrows suggest dependency or sequence, but it is unclear. For instance, is "Data Type Mapping -> Static Structure -> Visual Representation" a workflow or sequential artifact generation?
+
+**Response 5:**  
+Thank you for the comment. We apologize for the confusion. The arrows in Figure 1 represent **logical dependencies**, not strictly sequential steps. "Data Type Mapping" is a foundational task that establishes the correspondence between AUTOSAR and Modelica types. Based on this, we build the "Static Structure", defining software components and their relationships. "Visual Representation" is then derived to provide graphical views that facilitate model construction and understanding. In practice, this process is iterative and may involve refinements. We will clarify this in the figure with annotations and adjust its presentation for better clarity.
+
+---
+
+**Comment 6:**  
+Page 5: I do not understand the principle of "minimalism and descriptiveness".
+
+**Response 6:**  
+Thank you for your question. The principle refers to reducing unnecessary complexity and redundancy while ensuring that the model descriptions remain sufficiently informative. We selected the core elements from the AUTOSAR metamodel for initial modeling and demonstrated that other elements can be similarly extended using the same approach.
+
+---
+
+**Comment 7:**  
+The phrase "seamless integration of complex cross-domain applications" is vague—what exactly does "cross-domain" mean?
+
+**Response 7:**  
+"Cross-domain" refers to the integration and co-simulation of models from different engineering domains, such as software, hardware, electrical, and mechanical systems. In our example, we integrate AUTOSAR application-layer models with a **physical light circuit**, demonstrating how electrical behavior (modeled via Ohm’s Law) can interact seamlessly with AUTOSAR software logic in a single simulation environment.
+
+---
+
+**Comment 8:**  
+Page 10: The paper claims to "ensure accurate ECU behavior modeling"—how is this accuracy achieved if there is no modeling of cores, tasks, or memory?
+
+**Response 8:**  
+Thank you for raising this important point. Our method currently focuses on the **application layer** of AUTOSAR, modeling how software components behave in response to input signals. This is highly valuable for validating functional correctness and performance of applications. We do not currently model hardware-level aspects such as cores, tasks, or memory, which are typically handled by BSW and RTE layers. The layered architecture of AUTOSAR enables us to focus on application modeling independently. In future work, we plan to extend our method to incorporate these lower-level details for a more comprehensive ECU behavior simulation.
+
+---
+
+**Comment 9:**  
+Readers might be interested in how much time was required to implement the method (approximate person-months).
+
+**Response 9:**  
+The development of the AUTOSAR Modelica library took approximately **6 person-months**. This includes understanding the AUTOSAR standard, learning the Modelica language, and implementing the model library. As the library is open-source and modular, new AUTOSAR elements can be supported by adding new Modelica classes. We hope to further develop it in collaboration with the open-source community.
+
+---
+
+**Comment 10:**  
+Are there any performance issues when co-simulating larger components? How does it compare to Simulink for large models?
+
+**Response 10:**  
+For demonstration purposes, the paper showcases a headlamp system. However, our largest tested model is the **automotive throttle control system**, with **179 variables and 451 parameters**. In this case, the initial simulation time in Modelica was **7.2132 seconds**, compared to **1.4702 seconds** in Simulink. However, for scenarios involving only parameter changes, Modelica re-simulation was significantly faster—only **0.057 seconds**—making it more suitable for parameter sweeps. We will provide detailed performance comparisons in the revised manuscript.
+
+---
+
+**Comment 11:**  
+Minor details.
+
+**Response 11:**  
+Thank you for your thorough review and valuable suggestions. We will revise the manuscript to correct all identified minor issues and improve overall clarity and readability.
+
+
+
+
+
+
+
 
 ---
 
