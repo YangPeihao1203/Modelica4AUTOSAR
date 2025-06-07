@@ -22,7 +22,7 @@ Below is a comparison table showing the simulation times for the three example c
 | Example Case                | Modelica Simulation Time (1st) | Modelica Simulation Time (2nd and more) | Simulink Simulation Time |
 |----------------------------|-------------------------------|-------------------------------|--------------------------|
 | Swc_Expfcns_Example        | 5.9494 s                      | 0.0013 s                      | 0.4157 s                 |
-| Automotive Throttle Control | 7.2132 s                      | 0.057 s                       | 1.4702 s                 |
+| Automotive Throttle Control System  | 7.2132 s                      | 0.057 s                       | 1.4702 s                 |
 | autosar_swc_Example         | 4.2066 s                      | 0.0010 s                      | 0.6646 s                 |
 
 ---
