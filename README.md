@@ -27,6 +27,22 @@ This repository includes **10 comprehensive example models** showcasing the vers
 For **in-depth descriptions, usage instructions, simulation results, and performance metrics**, please refer to the dedicated showcase document: [EXAMPLES.md](./EXAMPLES.md).  
 Explore these cases to see how our approach enables flexible, extensible, and high-fidelity system modeling across domains.
 
+
+## 📘 AUTOSAR Model Encapsulation Guide
+
+For developers interested in understanding how AUTOSAR software components are structurally encapsulated using Modelica, we provide a detailed reference:
+
+📄 [AUTOSAR_Library_Encapsulation_Guide.md](./AUTOSAR_Library_Encapsulation_Guide.md)
+
+This guide includes:
+- Mapping between AUTOSAR meta-model definitions and Modelica classes
+- Inheritance strategies and Modelica limitations (e.g., multi-inheritance simplification)
+- Visual modeling conventions and usage of `VisibleElements`
+- Guidelines for extending the model library in compliance with AUTOSAR standards
+
+We highly recommend reading this document if you're contributing to or customizing the AUTOSAR library.
+
+
 ## Installation & Usage
 ### Prerequisites
 - **Modelica Environment**: Install [MWORKS Sysplorer](https://www.tongyuan.cc/product/MWorksSysplorer).
