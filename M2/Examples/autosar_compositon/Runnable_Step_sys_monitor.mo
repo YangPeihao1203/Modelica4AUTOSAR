@@ -1,4 +1,5 @@
 ﻿model Runnable_Step_sys_monitor
+extends M2.AUTOSARTemplates.SWComponentTemplate.SwcInternalBehavior.RunnableEntity;
   Modelica.Blocks.Interfaces.RealInput TPS_Secondary_Value_read 
     annotation (Placement(transformation(origin = {-113.3333349227905, 46.0}, 
       extent = {{-13.333334922790527, -13.333334922790527}, {13.333334922790499, 13.333334922790527}})));

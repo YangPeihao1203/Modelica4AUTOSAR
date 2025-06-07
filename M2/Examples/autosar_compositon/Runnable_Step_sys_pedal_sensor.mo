@@ -1,4 +1,5 @@
 ﻿model Runnable_Step_sys_pedal_sensor
+
   extends M2.AUTOSARTemplates.SWComponentTemplate.SwcInternalBehavior.RunnableEntity;
   Modelica.Blocks.Interfaces.RealInput APP_HwIO_Value_read 
     annotation (Placement(transformation(origin = {-112.0, 1.9999999999999991}, 
