@@ -290,17 +290,87 @@ Thank you for your thorough review and valuable suggestions. We will revise the 
 ## Reviewer #3
 
 **Comment 1:**  
-(请填写评审第一个问题)
+The visual modeling rules could be defined in a modeling-compatible manner, for example using OCL expressions or model transformation rules.
 
 **Response 1:**  
-(请填写对应回复)
+Thank you very much for your valuable suggestion. We agree that defining visual modeling rules using OCL expressions or model transformation rules would theoretically provide better formalization and compatibility. Currently, our rule design prioritizes implementation simplicity and ease of use, and does not fully adopt formal languages for description.
 
-**Comment 2:**  
-(请填写评审第二个问题)
-
-**Response 2:**  
-(请填写对应回复)
+As part of our Future Work, we plan to explore approaches based on OCL or model transformation techniques to enhance the expressiveness of rules and improve compatibility with other modeling tools. Your suggestion provides important guidance for our further improvements.
 
 ---
+
+**Comment 2:**  
+The formalization of the mapping between AUTOSAR and Modelica is based on a denotational semantic approach. For the modeling community, using OCL or transformation rules for formalization might be more appropriate. Are there any specific limitations or difficulties that make the latter approach infeasible?
+
+**Response 2:**  
+Thank you for your insightful comments. Our choice of a denotational semantic formalization was mainly driven by practical needs at the current toolchain and research stage, enabling a clear expression of the semantic intent of the mapping while maintaining a degree of flexibility.
+
+While formalizing with OCL or model transformation rules could indeed strengthen formal rigor and automation capabilities, we face the following challenges:
+
+- The learning curve of OCL and model transformation rules is relatively steep, potentially increasing development complexity.  
+- Existing tools provide limited support for the complex AUTOSAR-to-Modelica mappings, making it difficult to comprehensively cover all mapping details.  
+- Our current approach focuses on preliminary validation and demonstration, where denotational formalization allows rapid expression and adjustment.
+
+In future work, we plan to gradually integrate OCL or model transformation techniques to achieve more formalized and automated mapping definitions, enhancing rigor and tool support. Your suggestions are highly valuable and will be carefully considered.
+
+---
+
+**Comment 3:**  
+In the case study description, it appears that the AUTOSAR model needs to be manually reconstructed on the Modelica platform. Is this true? If so, why is there no automated mapping or import functionality from AUTOSAR models to Modelica? What limitations exist?
+
+**Response 3:**  
+Thank you for your question. At the current stage, our work primarily focuses on establishing the mapping framework and methodology between AUTOSAR and Modelica. Indeed, partial manual modeling was used in the example to validate the feasibility of our approach.
+
+The main limitations for automated mapping and import are:
+
+- The AUTOSAR standard and model structures are complex and diverse, with frequent standard version updates, which makes designing and maintaining automated transformation rules challenging.  
+- Mature, general-purpose tools or intermediate formats for AUTOSAR-to-Modelica conversion are currently lacking.  
+- To ensure semantic accuracy, automated tools need to handle extensive contextual information and constraints, which has not yet been fully achieved in our current research.
+
+Your suggestion is very valuable for us to further improve this work—thank you!
+
+---
+
+**Comment 4:**  
+The case study seems limited in scale and lacks representativeness and generalizability. Please describe the threats to validity for the empirical observations and how you addressed these threats.
+
+**Response 4:**  
+Thank you for your valuable comments. Regarding threats to validity, we have taken the following measures:
+
+1. Targeted case selection: We chose typical and representative AUTOSAR application scenarios, focusing on key technical points to validate the core capabilities of our approach. Additionally, we have supplemented more modeling cases in our Git repository, including comparisons with Simulink cases, covering model construction, simulation results, and performance.  
+2. Detailed experimental description: We clearly documented the experiment steps and environment to ensure reproducibility of results.  
+3. Acknowledgment of limitations: We openly acknowledge the limited scale of the case study and that it does not cover all complex application scenarios. Future work plans to support more AUTOSAR elements and more complex cases.
+
+---
+
+**Comment 5:**  
+It appears that users of the tool were not involved in the empirical observations. Are users willing to reproduce models across different platforms? How is the feedback from Modelica simulation traced back to AUTOSAR?
+
+**Response 5:**  
+Regarding user involvement and model reproduction, our current work is primarily at the stage of methodology and technical framework experimentation, with limited user participation so far. We have made the tool publicly available for download on related websites to encourage user adoption, and we continuously collect feedback for improvements. This paper mainly demonstrates feasibility and preliminary results, and we hope to attract more developers through open-source efforts.
+
+As for feedback from Modelica simulations, our vision is that once the AUTOSAR model represented in Modelica achieves correct results in multi-domain co-simulation, C code can be directly generated from the Modelica model and integrated back into the AUTOSAR toolchain. If discrepancies occur, Modelica model parameters or structures can be adjusted and revalidated through simulation.
+
+---
+
+**Comment 6:**  
+Minor details.
+
+**Response 6:**  
+Thank you for your thorough review and valuable suggestions. We will revise the manuscript to address all minor issues and improve the overall clarity and readability.
+
+---
+
+**Comment 7:**  
+Could you provide a code repository containing more examples/scenarios?
+
+**Response 7:**  
+Thank you for your guidance. We have added more examples and scenarios to the code repository, including various AUTOSAR application cases and comparisons with Simulink.
+
+
+
+---
+
+
 
 🙏 We sincerely thank all reviewers for their constructive and insightful feedback. Your comments have greatly contributed to improving the quality of our work and the ongoing development of this open-source platform.
