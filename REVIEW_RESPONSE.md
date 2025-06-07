@@ -347,7 +347,7 @@ Thank you for your valuable comments. Regarding threats to validity, we have tak
 It appears that users of the tool were not involved in the empirical observations. Are users willing to reproduce models across different platforms? How is the feedback from Modelica simulation traced back to AUTOSAR?
 
 **Response 5:**  
-Regarding user involvement and model reproduction, our current work is primarily at the stage of methodology and technical framework experimentation, with limited user participation so far. We have made the tool publicly available for download on related websites to encourage user adoption, and we continuously collect feedback for improvements. This paper mainly demonstrates feasibility and preliminary results, and we hope to attract more developers through open-source efforts.
+Regarding user involvement and model reproduction, our current work is at the stage of methodology and technical framework experimentation, with limited user participation so far. We have made the tool publicly available for download on related websites to encourage user adoption, and we continuously collect feedback for improvements. This paper mainly demonstrates feasibility results, and we hope to attract more developers through open-source efforts.
 
 As for feedback from Modelica simulations, our vision is that once the AUTOSAR model represented in Modelica achieves correct results in multi-domain co-simulation, C code can be directly generated from the Modelica model and integrated back into the AUTOSAR toolchain. If discrepancies occur, Modelica model parameters or structures can be adjusted and revalidated through simulation.
 
