@@ -42,6 +42,12 @@ This guide includes:
 
 We highly recommend reading this document if you're contributing to or customizing the AUTOSAR library.
 
+## 🔍 Threats and Future Work
+This work is the first to integrate Modelica with AUTOSAR, enabling multi-domain modeling and simulation of application-layer software. While it demonstrates feasibility and effectiveness, several limitations remain.
+
+Due to the vast scope of the AUTOSAR standard, our implementation focuses on the application layer and its simulation behaviors, rather than covering the full specification. The comparison is therefore limited to behavioral modeling tools such as Simulink. In addition, to ensure usability, we adopt an intuitive, non-formalized encapsulation of AUTOSAR elements, which may limit formal verification and integration with standard toolchains.
+
+Future work will extend support to more AUTOSAR elements, including RTE and BSW layers, and enhance compatibility with more industrial tools. We also plan to adopt formal methods (e.g., OCL, model transformations) to improve semantic rigor and support automated verification and integration into model-driven workflows.
 
 ## Installation & Usage
 ### Prerequisites
