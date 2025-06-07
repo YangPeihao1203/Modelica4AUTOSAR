@@ -49,6 +49,12 @@ Due to the vast scope of the AUTOSAR standard, our implementation focuses on the
 
 Future work will extend support to more AUTOSAR elements, including RTE and BSW layers, and enhance compatibility with more industrial tools. We also plan to adopt formal methods (e.g., OCL, model transformations) to improve semantic rigor and support automated verification and integration into model-driven workflows.
 
+## 📝 Review Responses
+
+We have prepared a detailed [REVIEW_RESPONSE.md](./REVIEW_RESPONSE.md) to address the comments raised by peer reviewers.  
+
+🙏 We thank all reviewers for their constructive feedback. All concerns raised have helped shape our ongoing research and the development roadmap of this open-source platform.
+
 ## Installation & Usage
 ### Prerequisites
 - **Modelica Environment**: Install [MWORKS Sysplorer](https://www.tongyuan.cc/product/MWorksSysplorer).
