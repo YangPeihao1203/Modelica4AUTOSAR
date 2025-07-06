@@ -29,7 +29,7 @@ Explore these cases to see how our approach enables flexible, extensible, and hi
 
 ## 📋 List of Encapsulated AUTOSAR Elements
 For a detailed list of the AUTOSAR meta-model elements encapsulated in this library, please refer to:
-List of the AUTOSAR meta-model elements.md(./List_of_the_AUTOSAR_meta-model_elements.md).
+[List of the AUTOSAR meta-model elements.md](./List_of_the_AUTOSAR_meta-model_elements.md).
 This document outlines the supported AUTOSAR elements and their corresponding Modelica representations, helping developers understand the current modeling coverage and extensibility options.
 
 ## 📘 AUTOSAR Model Encapsulation Guide
