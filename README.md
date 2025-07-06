@@ -27,6 +27,10 @@ This repository includes **10 comprehensive example models** showcasing the vers
 For **in-depth descriptions, usage instructions, simulation results, and performance metrics**, please refer to the dedicated showcase document: [EXAMPLES.md](./EXAMPLES.md).  
 Explore these cases to see how our approach enables flexible, extensible, and high-fidelity system modeling across domains.
 
+## 📋 List of Encapsulated AUTOSAR Elements
+For a detailed list of the AUTOSAR meta-model elements encapsulated in this library, please refer to:
+List of the AUTOSAR meta-model elements.md.
+This document outlines the supported AUTOSAR elements and their corresponding Modelica representations, helping developers understand the current modeling coverage and extensibility options.
 
 ## 📘 AUTOSAR Model Encapsulation Guide
 
