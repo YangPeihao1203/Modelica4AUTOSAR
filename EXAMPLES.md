@@ -19,11 +19,11 @@ Below is a comparison table showing the simulation times for the three example c
 > Also, system-level port names do not need to exactly match subcomponent port names — e.g., `a.u1` can correspond to `a.b.u`.
 
 
-| Example Case                |Model Scale in Modelica | Modelica Simulation Time (1st) | Modelica Simulation Time (2nd and more) | Simulink Simulation Time |
-|----------------------------|-------------------------------|-------------------------------|-------------------------------|--------------------------|
-| Swc_Expfcns_Example        | 92 variables, 40 parameters                       | 5.9494 s                      | 0.0013 s                      | 0.4157 s                 |
-| Automotive Throttle Control System  | 179 variables, 451 parameters                      | 7.2132 s                      | 0.057 s                       | 1.4702 s                 |
-| autosar_swc_Example         | 45 variables, 25 parameters                       | 4.2066 s                      | 0.0010 s                      | 0.6646 s                 |
+| Example Case                |Model Scale in Modelica | Modelica Simulation Time (1st) | Modelica Simulation Time (2nd and more) | Simulink Simulation Time(1st) |Simulink Simulation Time(2nd) |
+|----------------------------|-------------------------------|-------------------------------|-------------------------------|--------------------------|--------------------------|
+| Swc_Expfcns_Example        | 92 variables, 40 parameters                       | 5.9494 s                      | 0.0013 s                      | 0.4157 s                 | 0.4157 s                 |
+| Automotive Throttle Control System  | 179 variables, 451 parameters                      | 7.2132 s                      | 0.057 s                       | 1.4702 s                 | 0.4157 s                 |
+| autosar_swc_Example         | 45 variables, 25 parameters                       | 4.2066 s                      | 0.0010 s                      | 0.6646 s                 | 0.4157 s                 |
 
 ---
 
